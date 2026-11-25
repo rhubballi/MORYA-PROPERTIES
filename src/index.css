@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-cream-100 text-charcoal;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F7F4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C69B52;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A57B36;
+}
+
+/* Subtle gold glow & luxury shadow */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(198, 155, 82, 0.35);
+}
+
+.luxury-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -5px rgba(20, 43, 69, 0.12), 0 8px 12px -3px rgba(20, 43, 69, 0.06);
+}
+
+/* Gold gradient button */
+.btn-gold {
+  background: linear-gradient(135deg, #DFBF7B 0%, #C69B52 50%, #B0833C 100%);
+  color: #142B45;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #F0D59D 0%, #D4A95F 50%, #BD8F46 100%);
+  box-shadow: 0 4px 15px rgba(198, 155, 82, 0.4);
+}
